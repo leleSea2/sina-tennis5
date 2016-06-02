@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title> </title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <style type="text/css">
+		 * {margin:0px;padding:0px;}
+		.Top {height:47px;background-color:#FBFBFB;border-style:solid none solid none;border-width:1px;border-color:#C7C7C7;position:relative;}
+		.Top1 {margin-left:175px;width:640px;height:47px;float:left;}
+		.Top2 {width:360px;height:47px;float:left;}
+		.Top1 ul li {height:47px;float:left;text-align:center;font-size:13.5px;padding:0px 15px;line-height:47px;}
+		li {list-style-type:none;}
+		a {text-decoration:none;color:black;}
+		.Top2 ul li {margin-top:14.5px;list-style-type:none;float:left;text-align:center;font-size:15px;padding:0px 15px;}
+		 a:hover {color:#FF8500;}
+		//.morechange {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding-bottom:17.5px;}
+		.Top .more a  {padding-left:25px;padding-right:25px;padding-top:16px;}
+		.morechange {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding-bottom:18px;}
+		.Top .more1 {border-style:solid;border-color:#C7C7C7;border-width:1px;background:white;}
+		#more2 {width:370px;height:140px;border-style:none solid solid solid;border-color:#C7C7C7;border-width:1px;margin-left:391px;display:none;float:left;background:white;position:absolute;}
+		#more2 li {float:left;line-height:45px;font-size:15px;padding:0px 15px;}
+		#more2 div {border-style:none none dotted none;height:45px;width:370px;border-color:#C7C7C7;border-width:2px;}
+		.Top .Top2 .text-login {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;}
+		.Top .Top2 #text-login {padding:16px 30px;}
+		.Top .Top2 #text-client{padding:16px;27.5px;}
+		.Top .Top2 .text-client{border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;}
+		#login {width:479px;height:296px;border-style:solid;border-width:1px;border-color:#FFC525;margin:-1px 612px;display:none;float:left;background:white;position:absolute;}
+		#login p b a{font-size:10px;color:#666666;margin-left:467px;}
+		#login a:hover{color:#6600ff;}
+		#login .login-left{float:left; margin-top:5px;}
+		#login .login-left p {font-size:13px;margin:0px 13px;}
+		#login .login-left div {margin:26px 30px;width:183px;border-style:none solid none none;border-width:1px;border-color:#EDEDED;}
+		#login .login-right {margin-top:5px;}
+		#login .login-right p {font-size:13px;}
+		#login .login-right div {margin-top:26px;font-size:16px;}
+		#login .login-right div .text {width:204px;height:29px;color:#A9A9A9;}
+		#login .login-right div .submit {width:66px;height:31px;background:#FF8500;border-width:1px;color:white;font-size:15px;}
+		#login .login-right div font {margin-left:5px;}
+		#login .login-right div .a {color:#A87A2C;font-size:10px;padding:8px;}
+		#login .login-right div a {font-size:10px;}
+		#login .login-right div a:hover{color:#FF8500;}
+		#client {width:128px;height:415px;border-style:dotted solid solid solid;border-width:1px;border-color:#EBEBEB;margin:-1px 0px 0px 1004.5px;display:none;float:left;background:white;position:absolute;}
+		#client div {border-style:none none dotted none;border-width:2px;border-color:#C7C7C7;}
+		#client div table tr td {padding:6px;font-size:15px;}
+		.Nav {width:1000px;height:31px;margin:7px 180px;background:#EBEBEB;}
+		.Nav li {font-size:15px;padding-left:18.5px;line-height:31px;float:left;}
+		.Nav a:hover{color:red;text-decoration:underline;}
+		.ad {width:1000px;height:93px;margin:7px auto;border-width:1px;border-style:solid;}
+		.ad p  {font-size:50px;line-height:93px;margin-left:450px;}
+		.search {width:1000px;height:40px;margin:0px auto;}
+		.search .img  {float:left;}
+		.search .select {float:left;margin-left:343px;}
+		.search .select li {float:left;line-height:40px;font-size:12px;padding-left:8px;}
+		.search .select a:hover {color:red;text-decoration:underline;}
+		.search div input {height:20px;border-style:solid solid solid none;e;margin-left:-2px;border-width:1px;border-color:#CCCCCC;}
+		.search .search-input {float:left;padding:9px 10px;}
+		.search .search-submit {background:#F0F0F1;margin-left:5px;width:40px;border-style:solid;}
+		.in-nav {width:1000px;height:70px;background:url(picture/nav.jpg);margin:5px auto;}
+		.in-nav .in-nav-div {float:left;}
+		.in-nav a:hover{text-decoration:underline;}
+		.in-nav .nav-list-a1 {margin-left:77px;padding-top:15px;}
+		.in-nav .nav-list-a1 a {color:white;font-weight:bold;padding:2px;font-size:15px;}
+		.in-nav .nav-list-a2 {margin-left:72px;padding-top:5px;}
+		.in-nav .nav-list-a2 a {color:#82CCE9;padding:2px;font-size:10px;}
+		.in-nav .nav-list-b1 {margin-left:88px;padding-top:15px;}
+		.in-nav .nav-list-b1 a {color:white;font-weight:bold;padding:2px;font-size:15px;}
+		.in-nav .nav-list-b2 {margin-left:86px;padding-top:5px;}
+		.in-nav .nav-list-b2 a {color:#82CCE9;padding:2px;font-size:10px;}
+		#rolling {width:600px;height:360px;margin:15px 0px 0px 175px;position:relative;overflow:hidden;float:left;}
+		#rolling .rolling-img {height:360px;position:absolute;}
+		#rolling .rolling-img img {position:absolute;left:600px;width:600px;height:360px;}
+#rolling .rolling-transparent {width:601px;height:54px;background:black;opacity:0.4;filter:alpha(opacity=40);margin-top:307px;position:absolute;bottom:0px;}
+		#rolling .rolling-li  {position:absolute;right:5px;top:307px;float:right;}
+		#rolling .rolling-li li{background:#3E3E3E;margin-left:5px;width:14px;height:14px;float:left;border-radius:7px;cursor:pointer;}
+		#rolling .rolling-word li a:hover{color}
+		#rolling .rolling-li .change{background:#0080C9;margin-left:5px;width:10px;height:10px;border-radius:7px;border-style:solid;border-color:#87CDE9;}
+		#rolling .rolling-arrow-l {position:absolute;width:50px;height:60px;background:black;margin-top:150px;opacity:0.4;filter:alpha(opacity=40);color:white;font-size:50px;line-height:60px;text-align:center;cursor:pointer;}
+		#rolling .rolling-arrow-l li {width:50px;height:60px;}
+		#rolling .rolling-arrow-r {position:absolute;width:50px;height:60px;background:black;margin:150px 0px 0px 550px;opacity:0.4;filter:alpha(opacity=40);color:white;font-size:50px;line-height:60px;text-align:center;cursor:pointer;}
+		#rolling .rolling-arrow-r a {width:50px;height:60px;}
+		#rolling .rolling-arrow-l:hover{opacity:0.8;filter:alpha(opacity=80);}
+		#rolling .rolling-arrow-r:hover{opacity:0.8;filter:alpha(opacity=80);}
+		#rolling .rolling-word {width:3500px;height:360px;position:absolute;top:320px;}
+		#rolling .rolling-word li {float:left;margin-top:0px;position:absolute;}
+		#rolling .rolling-word li a {color:white;font-weight:bold;font-size:20px;}
+		#rolling .rolling-word li a:hover{text-decoration:underline;}
+		.word-left {width:390px;height:370px;margin:20px 0px 0px 785px;}
+		.word-left .word-left-one {height:75px;}
+		.word-left .big a {font-size:20px;font-weight:bold;color:red;margin:0px 0px 0px 5px;}
+		.word-left .big {margin-bottom:10px;}
+		.word-left .small {font-size:12px;float:left;margin:0px 0px 0px 3px;}
+		.word-left .small li {float:left;margin:5px 0px 0px 3px;}
+		.word-left .small li a{color:#252525;}
+		.word-left  a:hover{text-decoration:underline;}
+		.word-left .small li a:hover{color:red;}
+		.word-left .word-left-two {height:75px;margin-top:10px}
+		.word-left .word-left-thr {height:75px;margin-top:10px}
+		.word-left .word-left-b {border-top-style:solid;width:390px;height:100px;border-color:#8DCAE1;margin-top:25px;}
+		.word-left .word-left-b .information {border-style:none solid none solid;width:70px;margin:-12px 0px 0px 10px;background-color:white;border-color:#8DCAE1;border-width:1px;}
+		.word-left .word-left-b ul li {width:76px;cursor:pointer;float:left;}
+		.word-left .word-left-b ul li:hover{color:red;}
+		.word-left .word-left-b img {margin-top:10px;}
+		.word-left .word-left-b ul li p {margin-left:17.5px;font-size:10px;}
+		#move-word {width:300px;height:25px;border-width:1px;border-style:solid;margin:20px 0px 0px 175px;white-space:nowrap;}
+		#move-word #move-word-a {width:550px;}
+		#move-word-a li {float:left;}
+
+	</style>
+ </head>
+  <body>
+	<div class="Top">
+	  <div class="Top1">
+		<ul>
+		  <li><a href="">新浪首页</a></li>
+		  <li><a href="">新闻</a></li>
+		  <li><a href="">财经</a></li>
+		  <li><a href="">娱乐</a></li>
+		  <li><a href="">科技</a></li>
+		  <li><a href="">博客</a></li>
+		  <li><a href="">图片</a></li>
+		  <li><a href="">专栏</a></li>
+		  <li class="more" ><a id="mo" href="">更多</a></li>
+		  
+		</ul>
+	  </div>
+	  <div class="Top2">
+	    <ul>
+		  <li><a href="" id="text-login">登录</a></li>
+		  <li><a href="">注册</a></li>
+		  <li><a href="" id="text-client">移动客户端</a></li>
+	   </div>
+	</div>
+	<div id="more2">
+		<div>
+		<ul>
+		  <li><a href="">汽车</a></li>
+		  <li><a href="">教育</a></li>
+		  <li><a href="">时尚</a></li>
+		  <li><a href="">女性</a></li>
+		  <li><a href="">星座</a></li>
+		  <li><a href="">健康</a></li>
+		 </ul>
+		</div>
+		<div>
+		 <ul>
+		  <li><a href="">房产</a></li>
+		  <li><a href="">历史</a></li>
+		  <li><a href="">视频</a></li>
+		  <li><a href="">收藏</a></li>
+		  <li><a href="">育儿</a></li>
+		  <li><a href="">读书</a></li>
+		 </ul>
+		 </div>
+		 <div style="border-style:none;">
+		 <ul>
+		  <li><a href="">佛学</a></li>
+		  <li><a href="">游戏</a></li>
+		  <li><a href="">旅游</a></li>
+		  <li><a href="">邮箱</a></li>
+		  <li><a href="">导航</a></li>
+		  </ul>
+		  </div>
+	</div>
+ <div id="login">
+	 <p><b><a href="">×</a></b></p>
+		<div class="login-left">
+			<p>用微薄客户端扫描安全登录</p>
+			<div>
+				<img src="picture\QR.jpg" />
+			</div>
+		</div>
+		<div class="login-right">
+			<p>新浪微博、博客、邮箱账号，请直接登录</p>
+			<div>
+				<table cellspacing="10">
+				<form>
+					<tr><td><input type="text" value="微博/博客/邮箱/手机号" class="text" /></td></tr>
+					<tr><td><input type="text" value="请输入密码" class="text" /></td></tr>
+					<tr><td>
+					<input type="submit" value="登录" class="submit" />
+					<input type="checkbox" class="checkbox" /><font size="1">下次自动登录</font>
+					</td></tr>
+					<tr><td height="10"><a href="" class="a">忘记密码</a><a href="" class="a">立即注册</a></td></tr>
+				</form>
+					<tr><td>
+					<table>
+				<tr><td><p><img src="picture\QQ.jpg" /></td>
+					<td><a href="">使用QQ登录</a></td>
+				</tr>
+				</table>
+					</td></tr>
+				</table>
+			</div>
+		</div>
+</div>
+	<div id="client">
+			<div><table><tr><td><img src="picture\P1.jpg"></td><td><a href="">新浪微博</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P2.jpg"></td><td><a href="">新浪新闻</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P3.jpg"></td><td><a href="">新浪体育</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P4.jpg"></td><td><a href="">新浪娱乐</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P5.jpg"></td><td><a href="">新浪财经</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P6.jpg"></td><td><a href="">新浪博客</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P7.jpg"></td><td><a href="">新浪视频</a></td></tr></table></div>
+			<div><table><tr><td><img src="picture\P8.jpg"></td><td><a href="">新浪游戏</a></td></tr></table></div>
+			<div style="border-bottom-style:none"><table><tr><td><img src="picture\P9.jpg"></td><td><a href="">天气通</a></td></tr></table></div>
+	</div>
+	<div class="Nav">
+		<ul>
+			<li><a href="">首页</a></li>
+			<li><a href="">国内</a></li>
+			<li><a href="">国际</a></li>
+			<li><a href="">篮球</a></li>
+			<li><a href="">NBA</a></li>
+			<li><a href="">综合</a></li>
+			<li><a href="">视频</a></li>
+			<li><a href="">图片</a></li>
+			<li><a href="">专题</a></li>
+			<li><a href="">滚动</a></li>
+			<li><a href="">意甲</a></li>
+			<li><a href="">英超</a></li>
+			<li><a href="">西甲</a></li>
+			<li><a href="">网球</a></li>
+			<li><a href="">赛车</a></li>
+			<li><a href="">棋牌</a></li>
+			<li><a href="">高尔夫</a></li>
+			<li><a href="">彩票</a></li>
+			<li><a href="">博客</a></li>
+			<li><a href="">沙龙</a></li>
+		</ul>
+	</div>
+	<div class="ad">
+		<p>广告</p>
+	</div>
+	<div class="search">
+		<div class="img">
+			<a href=""><img src="picture\tennis.jpg" /></a>
+			<img src="picture\rolex.jpg" />
+		</div>
+		<div class="select">
+			<ul>
+				<li><a href="">中文官网</a></li>
+				<li><a href="">WTA官网</a></li>
+				<li><a href="">ATP官网</a></li>
+			</ul>
+			</div>
+			<div class="search-input">
+				<table>
+				<form>
+					<tr>
+					<td>
+					<img src="picture\search.jpg" />
+					</td>
+					<td>
+					<input type="text" />
+					</td>
+					<td>
+					<select>
+					<option>新闻</option>
+					<option>图片</option>
+					<option>博客</option>
+					<option>视频</option>
+					</select>
+					</td>
+					<td><input type="submit" value="搜索" class="search-submit" />
+					</tr>
+					</form>
+				</table>
+			
+		</div>
+	</div>
+	<div class="in-nav">
+		<div class="in-nav-div">
+		<ul>
+			<li class="nav-list-a1"><a href="">滚动</a><a href="">高清图</a></li>
+			<li class="nav-list-a2"><a href="">视频</a><a href="">明星</a><a href="">排行</a></li>
+		</ul>
+		</div>
+		<div class="in-nav-div">
+		<ul>
+			<li class="nav-list-b1"><a href="">ATP新闻</a><a href="">WTA新闻</a></li>
+			<li class="nav-list-b2"><a href="">中国军团</a><a href="">性感网坛</a></li>
+		</ul>
+		</div>
+		<div class="in-nav-div">
+		<ul>
+			<li class="nav-list-b1"><a href="">澳网</a><a href="">法网</a><a href="">温网</a><a href="">美网</a></li>
+			<li class="nav-list-b2"><a href="">中网</a><a href="">武网</a><a href="">上海大师赛</a></li>
+		</ul>
+		</div>
+		<div class="in-nav-div">
+		<ul>
+			<li class="nav-list-b1"><a href="">ATP排名</a><a href="">WTA排名</a></li>
+			<li class="nav-list-b2"><a href="">ATP赛程</a><a href="">WTA赛程</a></li>
+		</ul>
+		</div>
+		<div class="in-nav-div">
+		<ul>
+			<li class="nav-list-b1"><a href="">微博</a><a href="">博客</a></li>
+			<li class="nav-list-b2"><a href="">行业</a><a href="">比分</a></li>
+		</ul>
+		</div>
+	</div>
+	<div id="rolling">
+	<div class="rolling-img">
+		<div class="rolling-transparent"></div>
+			<a href=""><img src="rolling\5.jpg" style="left:-600px;" /></a>
+			<a href=""><img src="rolling\1.jpg" style="left:0px;" /></a>
+			<a href=""><img src="rolling\2.jpg" style="left:600px;" /></a>
+			<a href=""><img src="rolling\3.jpg" style="left:1200px;" /></a>
+			<a href=""><img src="rolling\4.jpg" style="left:1800px;" /></a>
+			<a href=""><img src="rolling\5.jpg" style="left:2400px;" /></a>
+			<a href=""><img src="rolling\1.jpg" style="left:3000px;" /></a>
+	     </div>
+		//<div class="rolling-transparent"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+		<div class="rolling-arrow-l" onselectstart="return false;" style="-moz-user-select:none;"><ul><li> < <li></ul></div>
+		<div class="rolling-arrow-r" onselectstart="return false;" style="-moz-user-select:none;"><ul><li> > <li></ul></div>
+		<div class="rolling-li">
+			<ul>
+				<li class="change">&nbsp</li>
+				<li>&nbsp</li>
+				<li>&nbsp</li>
+				<li>&nbsp</li>
+				<li>&nbsp</li>
+			</ul>
+		</div>
+		<div class="rolling-word">
+			<ul>
+				<li style="left:-600px;"><a href="">高清-李娜为武网拍摄宣传片 气质优雅美翻天</a></li>
+				<li style="left:0px;"><a href="">高清-穆雷生日夜完胜小德 首夺罗马赛冠军</a></li>
+				<li style="left:600px;"><a href="">高清-罗马赛小威破冠军荒 搞怪自拍庆祝</a></li>
+				<li style="left:1200px;"><a href="">高清-美好肉体集中营 网坛全裸写真锦集</a></li>
+				<li style="left:1800px;"><a href="">高清-佩内塔举办退役告别仪式 动情落泪</a></li>
+				<li style="left:2400px;"><a href="">高清-李娜为武网拍摄宣传片 气质优雅美翻天</a></li>
+				<li style="left:3000px;"><a href="">高清-穆雷生日夜完胜小德 首夺罗马赛冠军</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="word-left">
+		<div class="word-left-one">
+			<div class="big">
+				<a href="">法网第3日：德纳威扎和3中国金花皆亮相</a>
+			</div>
+			<div class="small">
+				<ul>
+					<li><a href="">A-拉哈勒普均送蛋</a></li>
+					<li><a href="">穆古拉扎三盘逆转</a></li>
+					<li><a href="">NO.1之争：拉德科贝尔皆有机会</a></li>
+					<li><a href="">调查：男女单冠军是谁 中国女网战绩？</a></li>
+					<li><a href="">专家：阿扎无缘八强 小威折桂</a></li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="word-left-two">
+			<div class="big">
+				<a href="">法网第3日：德纳威扎和3中国金花皆亮相</a>
+			</div>
+			<div class="small">
+				<ul>
+					<li><a href="">A-拉哈勒普均送蛋</a></li>
+					<li><a href="">穆古拉扎三盘逆转</a></li>
+					<li><a href="">NO.1之争：拉德科贝尔皆有机会</a></li>
+					<li><a href="">调查：男女单冠军是谁 中国女网战绩？</a></li>
+					<li><a href="">专家：阿扎无缘八强 小威折桂</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="word-left-thr">
+			<div class="big">
+				<a href="">法网第3日：德纳威扎和3中国金花皆亮相</a>
+			</div>
+				<div class="small">
+					<ul>
+						<li><a href="">A-拉哈勒普均送蛋</a></li>
+						<li><a href="">穆古拉扎三盘逆转</a></li>
+						<li><a href="">NO.1之争：拉德科贝尔皆有机会</a></li>
+						<li><a href="">调查：男女单冠军是谁 中国女网战绩？</a></li>
+						<li><a href="">专家：阿扎无缘八强 小威折桂</a></li>
+					</ul>
+				</div>
+			</div>
+		<div class="word-left-b">
+			<div class="information">
+				实用信息
+			</div>
+			<ul>
+				<li>
+				<img src="picture\CC_a_1.jpg" class="T1" />
+				<p>WTA赛程</p>
+				</li>
+				<li>
+				<img src="picture\CC_a_2.jpg" class="T2" />
+				<p>WTA排名</p>
+				</li>
+				<li>
+				<img src="picture\CC_a_3.jpg" class="T3" />
+				<p>ATP赛程</p>
+				</li>
+				<li>
+				<img src="picture\CC_a_4.jpg" class="T4" />
+				<p>ATP排名</p>
+				</li>
+				<li>
+				<img src="picture\CC_a_5.jpg" class="T5" />
+				<p>比分直播</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="move-word">
+		<div id="move-word-a">
+		<ul>
+			<li><a href="">aaaaaaaaaaaaaaa</a></li>
+			<li><a href="">bbbbbbbbbbbbbbb</a></li>
+			<li><a href="">ccccccccccccccc</a></li>
+			<li><a href="">ddddddddddddddd</a></li>
+		</ul>
+		</div>
+		<div id="move-word-b"></div>
+	</div>
+	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+	<script type="text/javascript">
+$(function(){
+	$("#mo").hover(
+		function(){
+			$("#mo").addClass('morechange');
+			$("#more2").show();
+				  },function(){
+			$(this).removeClass('morechange');
+			$("#more2").hide();
+			});
+	$("#more2").hover(function(){
+		$('#mo').addClass('morechange');
+		$(this).show();},function(){
+			$('#mo').removeClass('morechange');
+			$(this).hide();
+			});
+	$("#text-login").hover(function(){
+		$(this).addClass("text-login");
+		$("#login").show();},
+		function(){
+			$(this).removeClass("text-login");
+			$("#login").hide();
+		})
+	$("#login").hover(function(){
+		$("#text-login").addClass("text-login");
+		$(this).show();},
+		function(){
+			$("#text-login").removeClass("text-login");
+			$(this).hide();
+		})
+		$("#text-client").hover(function(){
+			$(this).addClass("text-client");
+			$("#client").show();
+		},function(){
+			$(this).removeClass("text-client");
+			$("#client").hide();
+		})
+		$("#client").hover(function(){
+			$("#text-client").addClass("text-client");
+			$(this).show();
+		},function(){
+			$("#text-client").removeClass("text-client");
+			$(this).hide();
+		})
+		var move=0;
+		var index=0;
+		var b_index=0;
+		function start_move(){
+			index=$("#rolling .rolling-li .change").index();
+			move=index*600;
+			if(index==4)
+				$("#rolling .rolling-img").css("left","-2400px");
+			if(index==0)	
+				$("#rolling .rolling-img").css("left","0px");
+			index=(index+1)%5;
+			$("#rolling .rolling-li li").eq(index).addClass("change").siblings().removeClass("change");
+			
+			move+=600;
+			$("#rolling .rolling-img").animate({left:-move},200);
+			$("#rolling .rolling-word").animate({left:-move},200);
+		}
+		$("#rolling .rolling-arrow-r").click(function(){
+			start_move();
+		})
+			$("#rolling .rolling-arrow-l").click(function(){
+			index=$("#rolling .rolling-li .change").index();
+			move=index*-600;
+			index=index-1;
+			if(index<0)
+				{move=-3000
+				$("#rolling .rolling-img").css("left","-3000px");
+				index=4;}			
+				move+=600;
+			$("#rolling .rolling-li li").eq(index).addClass("change").siblings().removeClass("change");
+			
+			$("#rolling .rolling-img").animate({left:move},200);
+			$("#rolling .rolling-word").animate({left:move},200);
+		})
+		$("#rolling .rolling-li li").hover(function(){
+			b_index=$("#rolling .rolling-li .change").index();
+			index=$(this).index();
+			if(index>b_index)
+			{move=index*-600;
+			$("#rolling .rolling-img").animate({left:move},200);
+			$("#rolling .rolling-word").animate({left:move},200);
+			}
+			if(index<b_index)
+			{move=index*-600;
+			$("#rolling .rolling-img").animate({left:move},200);
+			$("#rolling .rolling-word").animate({left:move},200);
+			}
+			$(this).addClass("change").siblings().removeClass("change");
+		},function(){})
+		var move_start=setInterval(start_move,5000);
+		$("#rolling .rolling-img").hover(function(){
+			clearInterval(move_start)
+		},function(){
+			move_start=setInterval(start_move,5000);
+		})
+		$(".word-left .word-left-b ul li").hover(function(){
+			var index_t=$(this).index();		
+			index_t+=1;
+			//alert(index_t);
+			$(".word-left .word-left-b .T"+index_t).attr("src","picture/CC_b_"+index_t+".jpg");
+		},function(){
+			var index_t=$(this).index();		
+			index_t+=1;
+			$(".word-left .word-left-b .T"+index_t).attr("src","picture/CC_a_"+index_t+".jpg");
+		})
+});
+</script>
+<script type="text/javascript">
+	var move-word=document.getElementById('move-word');
+	move-word.scrollLeft = 50;
+</script>
+
+  </body>
+</html>
