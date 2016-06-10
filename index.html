@@ -49,7 +49,7 @@
 		.ad p  {font-size:50px;line-height:93px;margin-left:450px;}
 		.search {width:1000px;height:40px;margin:0px auto;}
 		.search .img  {float:left;}
-		.search .select {float:left;margin-left:343px;}
+		.search .select {float:left;margin-left:323px;}
 		.search .select li {float:left;line-height:40px;font-size:12px;padding-left:8px;}
 		.search .select a:hover {color:red;text-decoration:underline;}
 		.search div input {height:20px;border-style:solid solid solid none;e;margin-left:-2px;border-width:1px;border-color:#CCCCCC;}
@@ -66,6 +66,10 @@
 		.in-nav .nav-list-b1 a {color:white;font-weight:bold;padding:2px;font-size:15px;}
 		.in-nav .nav-list-b2 {margin-left:86px;padding-top:5px;}
 		.in-nav .nav-list-b2 a {color:#82CCE9;padding:2px;font-size:10px;}
+		.in-nav .nav-list-c1 {margin-left:107px;padding-top:15px;}
+		.in-nav .nav-list-c1 a {color:white;font-weight:bold;padding:2px;font-size:15px;}
+		.in-nav .nav-list-c2 {margin-left:100px;padding-top:5px;}
+		.in-nav .nav-list-c2 a {color:#82CCE9;padding:2px;font-size:10px;}
 		#rolling {width:600px;height:360px;margin:15px 0px 0px 175px;position:relative;overflow:hidden;float:left;}
 		#rolling .rolling-img {height:360px;position:absolute;}
 		#rolling .rolling-img img {position:absolute;left:600px;width:600px;height:360px;}
@@ -121,7 +125,12 @@
 		.french_open .french_sign_wta {position:absolute;display:none;}
 		.french_open #changeATP_WTA {border-color:#B8A064;background:white;width:148px;height:29px;float:left;border-style:solid none none none;}
 		.french_open #changeATP_WTA a {font-size:12px;line-height:30px;line-clamp:150px;margin-left:54px;font-weight:bold;}
-		
+		.watch {width:100px;height:100px;border:1px solid red;border-radius:50%;margin:20px 0px 0px 175px;background:url(picture/watch_120.jpg);position:relative;}
+		.watch .hour {width:30px;height:3px;left:50px;top:48.5px;background:black;position:absolute;display:none;}
+		.watch .min {width:38px;height:1.5px;left:50px;top:48.5px;border:1px solid #0F3C03;position:absolute;}
+		.watch .min .min1 {width:19px;height:1.5px;background:#0F3C03;float:left;}
+		.watch .min .min2 {width:2px;height:1.5px;background:#0F3C03;float:left;margin-left:17px;}
+		.watch .sec {width:37px;height:1.5px;left:50px;top:48.5px;background:black;position:absolute;display:none;}
 	</style>
  </head>
   <body>
@@ -307,8 +316,8 @@ $(function(){
 				<li><a href="">WTA官网</a></li>
 				<li><a href="">ATP官网</a></li>
 			</ul>
-			</div>
-			<div class="search-input">
+		</div>
+		<div class="search-input">
 				<table>
 				<form>
 					<tr>
@@ -360,8 +369,8 @@ $(function(){
 		</div>
 		<div class="in-nav-div">
 		<ul>
-			<li class="nav-list-b1"><a href="">微博</a><a href="">博客</a></li>
-			<li class="nav-list-b2"><a href="">行业</a><a href="">比分</a></li>
+			<li class="nav-list-c1"><a href="">微博</a><a href="">博客</a></li>
+			<li class="nav-list-c2"><a href="">行业</a><a href="">比分</a></li>
 		</ul>
 		</div>
 	</div>
@@ -629,6 +638,7 @@ function auto_scroll(){
 		</ul>
 	</div>
 	</div>
+	</div>
 	<!-- 目前赛事 -->
 	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
 	<script type="text/javascript">
@@ -644,5 +654,17 @@ function auto_scroll(){
 			}
 		},function(){})
 	</script>
+	<div class="watch">
+		<div class="hour">
+		</div>
+		<div class="min">
+			<div class="min1">
+			</div>
+			<div class="min2">
+			</div>
+		</div>
+		<div class="sec">
+		</div>
+	</div>
   </body>
 </html>
