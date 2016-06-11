@@ -21,13 +21,13 @@
 		#more2 {width:370px;height:140px;border-style:none solid solid solid;border-color:#C7C7C7;border-width:1px;margin-left:380px;display:none;float:left;background:white;position:absolute;}
 		#more2 li {float:left;line-height:45px;font-size:15px;padding:0px 15px;}
 		#more2 div {border-style:none none dotted none;height:45px;width:370px;border-color:#C7C7C7;border-width:2px;}
-		.Top .Top2 .text-login {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding:15px 29px;}
+		.Top .Top2 .text-login {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding:16px 29px;}
 		//.Top .Top2 #text-login {padding:16px 30px;}
 		.Top .Top2 .text-login-li {width:93px;height:53px}
 		//.Top .Top2 #text-client{padding:16px;27.5px;}
 		.Top .Top2 .text-client-li {width:134px;height:50px;}
 		.Top .Top2 .text-client{border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding:16px 26.5px;}
-		#login {width:479px;height:296px;border-style:solid;border-width:1px;border-color:#FFC525;margin:-1px 612px;display:none;float:left;background:white;position:absolute;}
+		#login {width:479px;height:296px;border-style:solid;border-width:1px;border-color:#FFC525;margin:-1px 612px;display:none;float:left;background:white;position:absolute;z-index:9999;}
 		#login p b a{font-size:10px;color:#666666;margin-left:467px;}
 		#login a:hover{color:#6600ff;}
 		#login .login-left{float:left; margin-top:5px;}
@@ -136,12 +136,21 @@
 		.french_open .french_sign_wta {position:absolute;display:none;}
 		.french_open #changeATP_WTA {border-color:#B8A064;background:white;width:148px;height:29px;float:left;border-style:solid none none none;}
 		.french_open #changeATP_WTA a {font-size:12px;line-height:30px;line-clamp:150px;margin-left:54px;font-weight:bold;}
-		.watch {width:100px;height:100px;border:1px solid red;border-radius:50%;margin:20px 0px 0px 175px;background:url(picture/watch_120.jpg);position:relative;}
-		.watch .hour {width:30px;height:3px;left:50px;top:48.5px;background:black;position:absolute;display:none;}
-		.watch .min {width:38px;height:1.5px;left:50px;top:48.5px;border:1px solid #0F3C03;position:absolute;}
-		.watch .min .min1 {width:19px;height:1.5px;background:#0F3C03;float:left;}
-		.watch .min .min2 {width:2px;height:1.5px;background:#0F3C03;float:left;margin-left:17px;}
-		.watch .sec {width:37px;height:1.5px;left:50px;top:48.5px;background:black;position:absolute;display:none;}
+		.rolex_watch {width:300px;height:120px;border:2px solid #006039;margin:20px 0px 0px 175px;}
+		.rolex_watch .rolex_logo {width:88px;height:65px;float:left;margin:27.5px 0px 0px 10px;}
+		.rolex_watch .rolex_logo img {width:88px;height:65px;}
+		.watch {width:100px;height:100px;float:left;margin:10px 0px 0px 5px;}
+		.watch .watch_div {width:100px;height:100px;border-radius:50%;margin:1.5px 0px 0px 1.5px;position:relative;}
+		.watch .hour {width:26px;height:1px;left:45px;top:48.5px;border:1px solid #0F3C03;position:absolute;transform-origin:5px 50%;}
+		.watch .min {width:31px;height:1px;left:45px;top:48.5px;border:1px solid #0F3C03;position:absolute;transform-origin:5px 50%;}
+		.watch .min .min1 {width:19px;height:1px;background:#0F3C03;float:left;}
+		.watch .hour .hour1 {width:12px;height:1px;background:#0f3C03;float:left;}
+		.watch .hour .hour2 {width:3px;height:1px;background:#0f3C03;float:right;}
+		.watch .sec {width:42px;height:1px;left:40px;top:48.5px;background:#0F3C03;position:absolute;transform-origin:10px 50%;}
+		.rolex_watch .timezone {width:auto;px;height:auto;float:left;margin:27px 0px 0px 18px;}
+		.rolex_watch .timezone li {font-size:13px;font-family:"Arial";color:#05633C;}
+		.rolex_watch .timezone #local_time {color:#A37E2C}
+		.rolex_watch .timezone .interval {margin-top:5px;color:#A37E2C}
 	</style>
  </head>
   <body>
@@ -594,25 +603,7 @@ $(function(){
 		</span>
 		<span id="move_word_b"></span>
 	</div>
-<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
-<script type="text/javascript">
-function auto_scroll(){
-	var move_word=document.getElementById("move_word");
-	var move_word_a=document.getElementById("move_word_a");
-	var move_word_b=document.getElementById("move_word_b");
-	var timer;
-	move_word_b.innerHTML=move_word_a.innerHTML;
-	function scroll_start(){
-		if(move_word.scrollLeft>=move_word_a.offsetWidth){
-			move_word.scrollLeft-=move_word_a.offsetWidth;
-		}else{
-			move_word.scrollLeft++;
-		}
-	}
-	timer=setInterval(scroll_start,20);
- }
-	window.onload=auto_scroll;
-	</script>
+
 <div class="french_open">
 	<div id="changeATP_WTA" class="ATP_WTA" name="ATP">
 		<a href="">ATP赛程</a>
@@ -665,17 +656,84 @@ function auto_scroll(){
 			}
 		},function(){})
 	</script>
+<div class="rolex_watch">
+	<div class="rolex_logo">
+		<img src="picture\rolex_logo.jpg">
+	</div>
 	<div class="watch">
-		<div class="hour">
-		</div>
-		<div class="min">
-			<div class="min1">
+		<div class="watch_div">
+			<img src="picture\rolex_watch_100.jpg" />
+			<div class="hour" id="hou">
+				<div class="hour1">
+				</div>
+				<div class="hour2">
+				</div>
 			</div>
-			<div class="min2">
+			<div class="min" id="min">
+				<div class="min1">
+				</div>
 			</div>
-		</div>
-		<div class="sec">
+			<div class="sec" id="sec">
+			</div>
 		</div>
 	</div>
+	<div class="timezone">
+		<ur>
+			<li>GMT</li>
+			<li id="GMT_time"></li>
+			<li class="interval">Your Time</li>
+			<li id="local_time"></li>
+		</ur>
+	</div>
+</div>
+
+	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+function auto_scroll(){
+	var move_word=document.getElementById("move_word");
+	var move_word_a=document.getElementById("move_word_a");
+	var move_word_b=document.getElementById("move_word_b");
+	var timer;
+	move_word_b.innerHTML=move_word_a.innerHTML;
+	function scroll_start(){
+		if(move_word.scrollLeft>=move_word_a.offsetWidth){
+			move_word.scrollLeft-=move_word_a.offsetWidth;
+		}else{
+			move_word.scrollLeft++;
+		}
+	}
+	timer=setInterval(scroll_start,20);
+ }
+ 	function rolextime(){
+		var hou=document.getElementById("hou");
+		var min=document.getElementById("min");
+		var sec=document.getElementById("sec");
+		var watch_time=new Date();
+		var hour=watch_time.getHours();
+		var minute=watch_time.getMinutes();
+		var second=watch_time.getSeconds();
+		var time_rolex;
+		var GMT_time=document.getElementById("GMT_time");
+		var local_time=document.getElementById("local_time");
+		GMT_time.innerHTML=(hour-7)+":"+minute;
+		function timechange(){
+			var watch_time=new Date();
+			var hour=watch_time.getHours();
+			var minute=watch_time.getMinutes();
+			var second=watch_time.getSeconds();
+			hou.style.transform="rotate("+((hour-7)*30+minute*0.5-90)+"deg)";
+			min.style.transform="rotate("+(minute*6-90)+"deg)";;
+			sec.style.transform="rotate("+(second*6-90)+"deg)";
+			GMT_time.innerHTML=(hour-7)+":"+minute;
+			local_time.innerHTML=hour+":"+minute;
+		}
+
+		time_rolex=setInterval(timechange,990);
+	}
+	window.onload=function(){
+		auto_scroll();
+		rolextime();
+	}
+	</script>
   </body>
 </html>
