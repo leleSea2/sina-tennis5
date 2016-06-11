@@ -14,16 +14,19 @@
 		.Top2 ul li {margin-top:14.5px;list-style-type:none;float:left;text-align:center;font-size:15px;padding:0px 15px;}
 		 a:hover {color:#FF8500;}
 		//.morechange {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding-bottom:17.5px;}
-		.Top .more a  {padding-left:25px;padding-right:25px;padding-top:16px;}
-		.morechange {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding-bottom:18px;}
+		//.Top .more a  {padding:16px 25px 20px 25px;}
+		.Top .more {width:80px;height:50px;}
+		.morechange {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding-bottom:18px;padding:15px 24px 20px 24px;}
 		.Top .more1 {border-style:solid;border-color:#C7C7C7;border-width:1px;background:white;}
-		#more2 {width:370px;height:140px;border-style:none solid solid solid;border-color:#C7C7C7;border-width:1px;margin-left:391px;display:none;float:left;background:white;position:absolute;}
+		#more2 {width:370px;height:140px;border-style:none solid solid solid;border-color:#C7C7C7;border-width:1px;margin-left:380px;display:none;float:left;background:white;position:absolute;}
 		#more2 li {float:left;line-height:45px;font-size:15px;padding:0px 15px;}
 		#more2 div {border-style:none none dotted none;height:45px;width:370px;border-color:#C7C7C7;border-width:2px;}
-		.Top .Top2 .text-login {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;}
-		.Top .Top2 #text-login {padding:16px 30px;}
-		.Top .Top2 #text-client{padding:16px;27.5px;}
-		.Top .Top2 .text-client{border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;}
+		.Top .Top2 .text-login {border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding:15px 29px;}
+		//.Top .Top2 #text-login {padding:16px 30px;}
+		.Top .Top2 .text-login-li {width:93px;height:53px}
+		//.Top .Top2 #text-client{padding:16px;27.5px;}
+		.Top .Top2 .text-client-li {width:134px;height:50px;}
+		.Top .Top2 .text-client{border-style:solid solid none solid;border-color:#C7C7C7;border-width:1px;background:white;padding:16px 26.5px;}
 		#login {width:479px;height:296px;border-style:solid;border-width:1px;border-color:#FFC525;margin:-1px 612px;display:none;float:left;background:white;position:absolute;}
 		#login p b a{font-size:10px;color:#666666;margin-left:467px;}
 		#login a:hover{color:#6600ff;}
@@ -39,7 +42,7 @@
 		#login .login-right div .a {color:#A87A2C;font-size:10px;padding:8px;}
 		#login .login-right div a {font-size:10px;}
 		#login .login-right div a:hover{color:#FF8500;}
-		#client {width:128px;height:415px;border-style:dotted solid solid solid;border-width:1px;border-color:#EBEBEB;margin:-1px 0px 0px 1004.5px;display:none;float:left;background:white;position:absolute;}
+		#client {width:128px;height:415px;border-style:dotted solid solid solid;border-width:1px;border-color:#C7C7C7;margin:-1px 0px 0px 1014.5px;display:none;float:left;background:white;position:absolute;}
 		#client div {border-style:none none dotted none;border-width:2px;border-color:#C7C7C7;}
 		#client div table tr td {padding:6px;font-size:15px;}
 		.Nav {width:1000px;height:31px;margin:7px 0px 0px 175px;background:#EBEBEB;}
@@ -159,9 +162,9 @@
 	  </div>
 	  <div class="Top2">
 	    <ul>
-		  <li><a href="" id="text-login">登录</a></li>
+		  <li class="text-login-li"><a href="" id="text-login">登录</a></li>
 		  <li><a href="">注册</a></li>
-		  <li><a href="" id="text-client">移动客户端</a></li>
+		  <li class="text-client-li"><a href="" id="text-client">移动客户端</a></li>
 	   </div>
 	</div>
 	<div id="more2">
@@ -242,12 +245,12 @@
 <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
 <script type="text/javascript">
 $(function(){
-	$("#mo").hover(
+	$(".more").hover(
 		function(){
 			$("#mo").addClass('morechange');
 			$("#more2").show();
 				  },function(){
-			$(this).removeClass('morechange');
+			$("#mo").removeClass('morechange');
 			$("#more2").hide();
 			});
 	$("#more2").hover(function(){
