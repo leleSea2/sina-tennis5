@@ -721,10 +721,25 @@ function auto_scroll(){
 			var hour=watch_time.getHours();
 			var minute=watch_time.getMinutes();
 			var second=watch_time.getSeconds();
+			var gmthour;
 			hou.style.transform="rotate("+((hour-7)*30+minute*0.5-90)+"deg)";
 			min.style.transform="rotate("+(minute*6-90)+"deg)";;
 			sec.style.transform="rotate("+(second*6-90)+"deg)";
-			GMT_time.innerHTML=(hour-7)+":"+minute;
+			if(hour>=0&&hour<7){
+				gmthour=hour+24-7;
+			}else{
+				gmthour=hour-7;
+			}
+			if(hour<10){
+				hour="0"+hour;
+			}
+			if(gmthour<10){
+				gmthour="0"+gmthour;
+			}
+			if(minute<10){
+				minute="0"+minute;
+			}
+			GMT_time.innerHTML=gmthour+":"+minute;
 			local_time.innerHTML=hour+":"+minute;
 		}
 
