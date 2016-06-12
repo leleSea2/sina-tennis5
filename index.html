@@ -117,13 +117,16 @@
 		.word-left .word-left-b ul li:hover{color:red;}
 		.word-left .word-left-b img {margin-top:10px;}
 		.word-left .word-left-b ul li p {margin-left:17.5px;font-size:10px;}
-		#move_word {width:300px;height:25px;border-width:1px;border-style:solid;margin:20px 0px 0px 175px;white-space:nowrap;overflow:hidden;border-color:#C7C7C7;}
+		.mw_fo_rw {width:300px;height:380px;float:left;margin:20px 0px 0px 175px;border:1px solid black;}
+		.ATP_news {width:360px;height:380px;border:1px solid red;float:left;margin:20px 0px 0px 20px;}
+		.tennis_fun {width:300px;height:380px;border:1px solid blue;margin:20px 0px 0px 20px;float:left;}
+		#move_word {width:300px;height:25px;border-width:1px;border-style:solid;white-space:nowrap;overflow:hidden;border-color:#C7C7C7;}
 		#move_word #move_word_a {width:auto;height:25px;float:left;line-height:25px;}
 		#move_word #move_word_b {width:auto;height:25px;line-height:25px;}
 		#move_word  li {margin-left:2px;display:inline;}
 		#move_word  li a {color:#0195DB;font-size:10px;}
 		#move_word  li a:hover{text-decoration:underline;}
-		.french_open {width:300px;height:180px;margin:0px 0px 0px 175px;border_width:1px;border-color:#DEDEDE;border-width:1px;border-style:none solid solid solid;}
+		.french_open {width:300px;height:180px;border_width:1px;border-color:#DEDEDE;border-width:1px;border-style:none solid solid solid;}
 		.french_open .ATP_WTA {width:148px;height:29px;float:left;background:#ECECEC;}
 		.french_open .ATP_WTA a {font-size:12px;line-height:30px;line-clamp:150px;margin-left:54px;}
 		.french_open .ATP_WTA a:hover{color:red;text-decoration:underline;}
@@ -136,7 +139,7 @@
 		.french_open .french_sign_wta {position:absolute;display:none;}
 		.french_open #changeATP_WTA {border-color:#B8A064;background:white;width:148px;height:29px;float:left;border-style:solid none none none;}
 		.french_open #changeATP_WTA a {font-size:12px;line-height:30px;line-clamp:150px;margin-left:54px;font-weight:bold;}
-		.rolex_watch {width:300px;height:120px;border:2px solid #006039;margin:20px 0px 0px 175px;}
+		.rolex_watch {width:298px;height:120px;border:2px solid #006039;margin:20px 0px 0px 0px;}
 		.rolex_watch .rolex_logo {width:88px;height:65px;float:left;margin:27.5px 0px 0px 10px;}
 		.rolex_watch .rolex_logo img {width:88px;height:65px;}
 		.watch {width:100px;height:100px;float:left;margin:10px 0px 0px 5px;}
@@ -584,6 +587,8 @@ $(function(){
 		})
 });
 </script>
+	<!-- 滚动文字 -->
+<div class="mw_fo_rw">
 	<div id="move_word">
 	   <span id="move_word_a">
 			<ul>
@@ -603,6 +608,8 @@ $(function(){
 		</span>
 		<span id="move_word_b"></span>
 	</div>
+		
+	<!-- 正在进行的赛事 -->	
 
 <div class="french_open">
 	<div id="changeATP_WTA" class="ATP_WTA" name="ATP">
@@ -641,22 +648,9 @@ $(function(){
 	</div>
 	</div>
 	</div>
-	<!-- 目前赛事 -->
-	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
-	<script type="text/javascript">
-		$(".french_open .ATP_WTA").hover(function(){
-			$(this).attr("id","changeATP_WTA").siblings().removeAttr("id");
-			//alert($(this).attr("name"));
-			if($(this).attr("name")=='ATP'){
-			$(".french_open .french_sign_wta").css("display","none");
-			$(".french_open .french_sign_atp").css("display","inline");
-			}else{
-				$(".french_open .french_sign_atp").css("display","none");
-				$(".french_open .french_sign_wta").css("display","inline");
-			}
-		},function(){})
-	</script>
-<div class="rolex_watch">
+
+	<!-- 劳力士时间 -->
+	<div class="rolex_watch">
 	<div class="rolex_logo">
 		<img src="picture\rolex_logo.jpg">
 	</div>
@@ -685,10 +679,28 @@ $(function(){
 			<li id="local_time"></li>
 		</ur>
 	</div>
+  </div>
 </div>
+	<!-- 目前赛事 -->
+	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+	<script type="text/javascript">
+		$(".french_open .ATP_WTA").hover(function(){
+			$(this).attr("id","changeATP_WTA").siblings().removeAttr("id");
+			//alert($(this).attr("name"));
+			if($(this).attr("name")=='ATP'){
+			$(".french_open .french_sign_wta").css("display","none");
+			$(".french_open .french_sign_atp").css("display","inline");
+			}else{
+				$(".french_open .french_sign_atp").css("display","none");
+				$(".french_open .french_sign_wta").css("display","inline");
+			}
+		},function(){})
+	</script>
+
 
 	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
 <script type="text/javascript">
+	//滚动文字JS
 function auto_scroll(){
 	var move_word=document.getElementById("move_word");
 	var move_word_a=document.getElementById("move_word_a");
@@ -704,6 +716,8 @@ function auto_scroll(){
 	}
 	timer=setInterval(scroll_start,20);
  }
+
+ //劳力士时间JS
  	function rolextime(){
 		var hou=document.getElementById("hou");
 		var min=document.getElementById("min");
@@ -721,15 +735,12 @@ function auto_scroll(){
 			var hour=watch_time.getHours();
 			var minute=watch_time.getMinutes();
 			var second=watch_time.getSeconds();
-			var gmthour;
-			hou.style.transform="rotate("+((hour-7)*30+minute*0.5-90)+"deg)";
-			min.style.transform="rotate("+(minute*6-90)+"deg)";;
+			var mingap=watch_time.getTimezoneOffset();
+			var gmthour=Math.abs(Math.floor(mingap/60)+1+hour);
+			var gmtmin=mingap%60+minute;
+			hou.style.transform="rotate("+(gmthour*30+gmtmin*0.5-90)+"deg)";
+			min.style.transform="rotate("+(gmtmin*6-90)+"deg)";;
 			sec.style.transform="rotate("+(second*6-90)+"deg)";
-			if(hour>=0&&hour<7){
-				gmthour=hour+24-7;
-			}else{
-				gmthour=hour-7;
-			}
 			if(hour<10){
 				hour="0"+hour;
 			}
@@ -739,7 +750,10 @@ function auto_scroll(){
 			if(minute<10){
 				minute="0"+minute;
 			}
-			GMT_time.innerHTML=gmthour+":"+minute;
+			if(gmtmin<10){
+				gmtmin="0"+gmtmin;
+			}
+			GMT_time.innerHTML=gmthour+":"+gmtmin;
 			local_time.innerHTML=hour+":"+minute;
 		}
 
@@ -750,5 +764,20 @@ function auto_scroll(){
 		rolextime();
 	}
 	</script>
+
+	<!-- APT新闻 -->
+	<div class="ATP_news">
+		<div class="top">
+			<ur>
+				<li class="img"><img src="" /></li>
+				<li class="left"><a href="">ATP新闻</a></li>
+				<li class="right"><a href="">更多>></a></li>
+			</ur>
+		</div>
+	</div>
+
+	<!-- 网坛花絮 -->
+	<div class="tennis_fun">
+	</div>
   </body>
 </html>
