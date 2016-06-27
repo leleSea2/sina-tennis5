@@ -208,7 +208,7 @@
 	  <div class="Top2">
 	    <ul>
 		  <li class="text-login-li"><a href="" id="text-login">登录</a></li>
-		  <li><a href="">注册</a></li>
+		  <li><a href="login.html">注册</a></li>
 		  <li class="text-client-li"><a href="" id="text-client">移动客户端</a></li>
 	   </div>
 	</div>
@@ -256,13 +256,13 @@
 			<div>
 				<table cellspacing="10">
 				<form>
-					<tr><td><input type="text" value="微博/博客/邮箱/手机号" class="text" /></td></tr>
-					<tr><td><input type="text" value="请输入密码" class="text" /></td></tr>
+					<tr><td><input type="text" value="微博/博客/邮箱/手机号" class="text" onblur="login_onblur(this)" onclick="login_onclick(this)" /></td></tr>
+					<tr><td><input type="password" value="请输入密码" name="password" class="text" onclick="login_onclick(this)" onblur="login_onblur(this)" /></td></tr>
 					<tr><td>
 					<input type="submit" value="登录" class="submit" />
 					<input type="checkbox" class="checkbox" /><font size="1">下次自动登录</font>
 					</td></tr>
-					<tr><td height="10"><a href="" class="a">忘记密码</a><a href="" class="a">立即注册</a></td></tr>
+					<tr><td height="10"><a href="" class="a">忘记密码</a><a href="login.html" class="a">立即注册</a></td></tr>
 				</form>
 					<tr><td>
 					<table>
@@ -275,6 +275,27 @@
 			</div>
 		</div>
 </div>
+<!-- 登陆检测 -->
+<script type="text/javascript">
+	function login_onclick(obj){
+		if(obj.value=="微博/博客/邮箱/手机号"|obj.value=="请输入密码"){
+			obj.value="";
+			obj.style.color="black";
+		}
+	}
+	function login_onblur(obj){
+		if(obj.value==""){
+			if(obj.name=="password"){
+				obj.value="请输入密码";
+				obj.style.color="#A9A9A9";
+			}else{
+			obj.value="微博/博客/邮箱/手机号"
+			obj.style.color="#A9A9A9";
+			}
+		}
+	}
+</script>
+
 	<div id="client">
 			<div><table><tr><td><img src="picture\P1.jpg"></td><td><a href="">新浪微博</a></td></tr></table></div>
 			<div><table><tr><td><img src="picture\P2.jpg"></td><td><a href="">新浪新闻</a></td></tr></table></div>
