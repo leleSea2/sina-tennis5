@@ -256,8 +256,10 @@
 			<div>
 				<table cellspacing="10">
 				<form>
-					<tr><td><input type="text" value="微博/博客/邮箱/手机号" class="text" onblur="login_onblur(this)" onclick="login_onclick(this)" /></td></tr>
-					<tr><td><input type="password" value="请输入密码" name="password" class="text" onclick="login_onclick(this)" onblur="login_onblur(this)" /></td></tr>
+					<tr><td><input type="text" value="微博/博客/邮箱/手机号" class="text" onblur="login_onblur(this)" onclick="login_onclick(this)" /></td></tr>				
+					<tr><td><input type="password" value="" name="psw_ps" class="text" id="psw_ps" style="display:none;" onblur="login_onblur(this)" />
+					<input type="text" value="请输入密码" name="psw_te" class="text" id="psw_te" onfocus="login_onfocus(this)" /></td></tr>
+					
 					<tr><td>
 					<input type="submit" value="登录" class="submit" />
 					<input type="checkbox" class="checkbox" /><font size="1">下次自动登录</font>
@@ -283,11 +285,27 @@
 			obj.style.color="black";
 		}
 	}
+	function login_onfocus(obj){
+		var psw_ps=document.getElementById("psw_ps");
+		if(obj.value!="请输入密码"){
+			return;
+		}
+		obj.style.display="none";
+		psw_ps.style.display="";
+		psw_ps.value="";
+		psw_ps.focus();
+	}
 	function login_onblur(obj){
 		if(obj.value==""){
-			if(obj.name=="password"){
-				obj.value="请输入密码";
-				obj.style.color="#A9A9A9";
+			if(obj.name=="psw_ps"){
+				var psw_te=document.getElementById("psw_te")
+				if(obj.value!=""){
+					return;
+				}
+				obj.style.display="none";
+				psw_te.style.display="";
+				psw_te.value="请输入密码";
+				psw_te.style.color="#A9A9A9";
 			}else{
 			obj.value="微博/博客/邮箱/手机号"
 			obj.style.color="#A9A9A9";

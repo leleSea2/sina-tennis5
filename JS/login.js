@@ -1,3 +1,4 @@
+//<script type="text/javascript" src="JS/ajax_tool.js"></script> 
 function select(obj){
 		if(obj.className!="border_change"){
 			$(obj).addClass("border_change").css("cursor","default").css("background-color","white").siblings().removeClass("border_change");
@@ -22,7 +23,11 @@ function select(obj){
 		var reg_exp_psw=/\S{6,16}/gi;
 		if(obj.name=="username"){
 			if(reg_exp_user.test(val)){
-				document.getElementById("vali_user").innerHTML="<img src='picture/true.jpg' />";
+				ajax_obj=GetAjaxObj();
+				var username_mobile=document.getElementById("username_mobile")	
+				var url="/sina-tennis/user_login.php?username="+username_mobile.value;
+				action_ajax(ajax_obj,url);
+				//document.getElementById("vali_user").innerHTML="<img src='picture/true.jpg' />";
 			}else if(!val){
 				document.getElementById("vali_user").innerHTML="<div><img src='picture/red_x.jpg' /></div>请输入手机号码";
 				document.getElementById("vali_user").style.color="red";

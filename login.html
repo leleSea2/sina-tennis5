@@ -5,12 +5,12 @@
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   <script type="text/javascript" src="JS/jquery-3.0.0.min.js"></script>
   <script type="text/javascript" src="JS/login.js"></script>
-  <script type="text/javascript" src="JS/ajax_tool.js"></script>
+  <script type="text/javascript" src="JS/ajax_tool.js"></script> 
   <style type="text/css">
     li {list-style-type:none;}
 	* {margin:0px;padding:0px;font-size:15px;}
 	body {background:url(picture/blue_sky1.jpg);}
-	 a {text-decoration:none;color:#0A8CD2;}
+	 a {text-decoration:none;color:#0A8CD2;font-size:12px;}
 	 a:hover{text-decoration:underline;}
 	.top {width:900px;height:70px;margin:0px auto;}
 	.top .logo {margin:26px 0px 0px -10px;float:left;}
@@ -36,6 +36,7 @@
 	.bottom .bottom2 .login .email_info table td {width:170px;height:30px;}
 	#vali_user{font-size:12px;}
 	#vali_user div{float:left;}
+	#vali_user a {}
 	#vali_psw {font-size:12px;}
 	#vali_psw div {float:left;color:red;font-size:12px;}
 	#vali_user_email {font-size:12px;}
@@ -95,7 +96,7 @@
 						<table>
 							<tr>
 								<td class="word"><font style="color:red;">*</font>手机号码：</td>									
-								<td colspan="2"><input type="text" name="username" class="user_pas" onblur="pr_username_tf(this)" onclick="pr_username_re(this)"/></td>
+								<td colspan="2"><input type="text" name="username" id="username_mobile" class="user_pas" onblur="pr_username_tf(this)" onclick="pr_username_re(this)"/></td>
 								<td id="vali_user"></td>
 							</tr>
 							<tr>
@@ -146,7 +147,7 @@
 						<table>
 							<tr>
 								<td class="word"><font style="color:red;">*</font>邮箱地址：</td>									
-								<td colspan="2"><input type="text" class="user_pas" name="username_email" onblur="pr_username_tf_email(this)" onclick="pr_username_re_mail(this)" /></td>
+								<td colspan="2"><input type="text" class="user_pas" id="password_email" name="username_email" onblur="pr_username_tf_email(this)" onclick="pr_username_re_mail(this)" /></td>
 								<td id="vali_user_email"></td>
 							</tr>
 							<tr>
@@ -238,29 +239,14 @@
 	},function(){
 			$(this).css("background-color","");
 		
-	})
+	});
 
-	function getAjaxObj(ajax_obj){
-		try{
-		ajax_obj=new XMLHttpRequest();
-	}catch(e){
-			ajax_obj=new ActiveXObject("Microsoft.XMLHTTP");
-		}	
-	}
+	
 
-	function createAjax(){
-		ajax_obj=GetAjaxObj();
-		var url="login_php.php"
-		var data=$("")
-		ajax_obj.open("get",url,true);
-		ajax_obj.onreadystatechange=process;
-		ajax_obj.setRequestHeader("content-type","application/x-www-form-urlencoded");
-		ajax_obj.send();
-	}
-	function process(){
-		document.getElementById("code_pic").
-		ajax_obj.reponseText
-	}
+	
+	
+	
+	
 	
 
  </script>
